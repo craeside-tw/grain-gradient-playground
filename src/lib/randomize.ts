@@ -12,7 +12,6 @@ const SHAPES: GrainShape[] = [
   'corners',
   'ripple',
   'blob',
-  'sphere',
 ];
 
 function randomInt(min: number, max: number): number {
@@ -40,7 +39,7 @@ function randomSlot(): TokenColorSlot {
 export function randomizePlaygroundState(
   current: PlaygroundState,
 ): PlaygroundState {
-  const colorCount = randomInt(2, 7);
+  const colorCount = randomInt(2, 5);
   const colorSlots = Array.from({ length: colorCount }, () => randomSlot());
 
   return {

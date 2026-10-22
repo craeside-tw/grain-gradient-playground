@@ -6,8 +6,7 @@ export type GrainShape =
   | 'truchet'
   | 'corners'
   | 'ripple'
-  | 'blob'
-  | 'sphere';
+  | 'blob';
 
 export type PlaygroundState = {
   colorSlots: TokenColorSlot[];

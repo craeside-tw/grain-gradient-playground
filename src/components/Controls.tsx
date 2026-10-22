@@ -22,7 +22,6 @@ const SHAPES: GrainShape[] = [
   'corners',
   'ripple',
   'blob',
-  'sphere',
 ];
 
 function ControlRow({
