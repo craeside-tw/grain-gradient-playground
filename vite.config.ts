@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -45,7 +46,7 @@ function pagesBasePath(): string {
 
 export default defineConfig({
   base: pagesBasePath(),
-  plugins: [react()],
+  plugins: [tailwindcss(), react()],
   resolve: {
     alias: {
       '@tw-tokens': tokensDir,

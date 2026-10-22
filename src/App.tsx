@@ -42,23 +42,31 @@ export function App() {
               state={state}
               animationSpeed={animationSpeed}
             />
-            <button
-              type="button"
-              className="download-button"
-              onClick={() => {
-                void previewRef.current?.downloadPng();
-              }}
-            >
-              Download PNG
-            </button>
+            <div className="preview-actions">
+              <button
+                type="button"
+                className="playback-button"
+                aria-pressed={animationPaused}
+                onClick={() => setAnimationPaused((paused) => !paused)}
+              >
+                {animationPaused ? 'Play' : 'Pause'}
+              </button>
+              <button
+                type="button"
+                className="download-button"
+                onClick={() => {
+                  void previewRef.current?.downloadPng();
+                }}
+              >
+                Download PNG
+              </button>
+            </div>
           </section>
           <CodePanel state={state} />
         </div>
         <Controls
           state={state}
-          animationPaused={animationPaused}
           onChange={setState}
-          onTogglePause={() => setAnimationPaused((paused) => !paused)}
           onRandomize={() =>
             setState((current) => randomizePlaygroundState(current))
           }
