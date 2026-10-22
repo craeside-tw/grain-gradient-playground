@@ -1,0 +1,168 @@
+{
+  "color": {
+    "neutral": {
+      "black": { "$value": "#000000", "$type": "color" },
+      "10": { "$value": "#1A1A1A", "$type": "color" },
+      "20": { "$value": "#333333", "$type": "color" },
+      "40": { "$value": "#666666", "$type": "color" },
+      "60": { "$value": "#999999", "$type": "color" },
+      "80": { "$value": "#CCCCCC", "$type": "color" },
+      "90": { "$value": "#E5E5E5", "$type": "color" },
+      "95": { "$value": "#F1F1F1", "$type": "color" },
+      "white": { "$value": "#FFFFFF", "$type": "color" }
+    },
+    "grey": {
+      "base": { "$value": "#97939F", "$type": "color" },
+      "near-black": {
+        "$value": "#252429",
+        "$type": "color",
+        "$description": "Dubois near-black — member text-grey-near-black utility"
+      },
+      "darken-10": { "$value": "#7D7887", "$type": "color" },
+      "darken-14": { "$value": "#736E7C", "$type": "color" },
+      "darken-25": { "$value": "#57545F", "$type": "color" },
+      "darken-35": { "$value": "#3F3C44", "$type": "color" },
+      "darken-38": { "$value": "#37353B", "$type": "color" },
+      "darken-40": { "$value": "#323036", "$type": "color" },
+      "darken-45": { "$value": "#252429", "$type": "color" },
+      "darken-50": { "$value": "#19181B", "$type": "color" },
+      "lighten-5": { "$value": "#A4A0AB", "$type": "color" },
+      "lighten-10": { "$value": "#B1AEB7", "$type": "color" },
+      "lighten-15": { "$value": "#BEBBC3", "$type": "color" },
+      "lighten-20": { "$value": "#CBC9CF", "$type": "color" },
+      "lighten-25": { "$value": "#D8D6DB", "$type": "color" },
+      "lighten-30": { "$value": "#E5E4E7", "$type": "color" },
+      "lighten-35": { "$value": "#F2F1F3", "$type": "color" },
+      "lighten-36": { "$value": "#F5F4F5", "$type": "color" },
+      "lighten-38": { "$value": "#FAFAFA", "$type": "color" },
+      "lighten-40": { "$value": "#FFFFFF", "$type": "color" },
+      "lighten-45": { "$value": "#FFFFFF", "$type": "color" },
+      "lighten-50": { "$value": "#FFFFFF", "$type": "color" },
+      "lighten-75": { "$value": "#FFFFFF", "$type": "color" }
+    },
+    "gray": {
+      "$description": "Tailwind default gray ramp — member attorney dashboard utilities (gray-50…900)",
+      "50": { "$value": "#F9FAFB", "$type": "color" },
+      "100": { "$value": "#F3F4F6", "$type": "color" },
+      "200": { "$value": "#E5E7EB", "$type": "color" },
+      "300": { "$value": "#D1D5DB", "$type": "color" },
+      "400": { "$value": "#9CA3AF", "$type": "color" },
+      "500": { "$value": "#6B7280", "$type": "color" },
+      "600": { "$value": "#4B5563", "$type": "color" },
+      "700": { "$value": "#374151", "$type": "color" },
+      "800": { "$value": "#1F2937", "$type": "color" },
+      "900": { "$value": "#111827", "$type": "color" }
+    },
+    "navy": {
+      "darken-25": {
+        "$value": "#344F83",
+        "$type": "color",
+        "$description": "Member document UI — text-navy-darken-25 utility"
+      }
+    },
+    "error": {
+      "base": { "$value": "#E2351D", "$type": "color" },
+      "darken-10": { "$value": "#C22B18", "$type": "color" },
+      "darken-20": { "$value": "#9A2213", "$type": "color" },
+      "darken-30": { "$value": "#71190E", "$type": "color" },
+      "lighten-10": { "$value": "#F06B55", "$type": "color" },
+      "lighten-20": { "$value": "#F49085", "$type": "color" },
+      "lighten-30": { "$value": "#F8BCB5", "$type": "color" },
+      "lighten-35": { "$value": "#FAD1CC", "$type": "color" }
+    },
+    "marketing-green": {
+      "$description": "Marketing / :root semantic success ramp — NOT classic Dubois green (see color-classic green)",
+      "base": { "$value": "#65BB63", "$type": "color" },
+      "darken-10": { "$value": "#4E9D4C", "$type": "color" },
+      "darken-20": { "$value": "#3A8038", "$type": "color" },
+      "darken-30": { "$value": "#2A5E28", "$type": "color" },
+      "lighten-15": { "$value": "#BDE2BC", "$type": "color" },
+      "lighten-20": { "$value": "#CEE9CD", "$type": "color" },
+      "lighten-25": { "$value": "#E0F1DF", "$type": "color" },
+      "lighten-28": { "$value": "#EAF6EA", "$type": "color" }
+    },
+    "warning": {
+      "base": { "$value": "#E9A12A", "$type": "color" },
+      "darken-05": { "$value": "#D48F1E", "$type": "color" },
+      "darken-10": { "$value": "#C07D12", "$type": "color" },
+      "darken-15": { "$value": "#B77410", "$type": "color" },
+      "darken-20": { "$value": "#A2640D", "$type": "color" },
+      "darken-25": { "$value": "#8D540A", "$type": "color" },
+      "lighten-10": { "$value": "#F3C968", "$type": "color" },
+      "lighten-20": { "$value": "#F7DFB4", "$type": "color" },
+      "lighten-25": { "$value": "#F9E7C9", "$type": "color" }
+    },
+    "slate": {
+      "$description": "Neutral slate ramp — used by viz/dashboard chrome and data-display components.",
+      "50": { "$value": "#F8FAFC", "$type": "color" },
+      "100": { "$value": "#F1F5F9", "$type": "color" },
+      "200": { "$value": "#E2E8F0", "$type": "color" },
+      "300": { "$value": "#CBD5E1", "$type": "color" },
+      "400": { "$value": "#94A3B8", "$type": "color" },
+      "500": { "$value": "#64748B", "$type": "color" },
+      "600": { "$value": "#475569", "$type": "color" },
+      "700": { "$value": "#334155", "$type": "color" },
+      "800": { "$value": "#1E293B", "$type": "color" },
+      "900": { "$value": "#0F172A", "$type": "color" }
+    },
+    "indigo": {
+      "$description": "Indigo accent ramp — secondary/info accents in viz + dashboards.",
+      "50": { "$value": "#EEF2FF", "$type": "color" },
+      "100": { "$value": "#E0E7FF", "$type": "color" },
+      "200": { "$value": "#C7D2FE", "$type": "color" },
+      "300": { "$value": "#A5B4FC", "$type": "color" },
+      "400": { "$value": "#818CF8", "$type": "color" },
+      "500": { "$value": "#6366F1", "$type": "color" },
+      "600": { "$value": "#4F46E5", "$type": "color" },
+      "700": { "$value": "#4338CA", "$type": "color" },
+      "800": { "$value": "#3730A3", "$type": "color" },
+      "900": { "$value": "#312E81", "$type": "color" }
+    },
+    "purple": {
+      "$description": "Purple accent — secondary/commerce accent; base aligns to commerce eggplant family.",
+      "base": { "$value": "#9B51E0", "$type": "color" },
+      "50": { "$value": "#FAF5FF", "$type": "color" },
+      "100": { "$value": "#F3E8FF", "$type": "color" },
+      "200": { "$value": "#E9D5FF", "$type": "color" },
+      "300": { "$value": "#D8B4FE", "$type": "color" },
+      "400": { "$value": "#C084FC", "$type": "color" },
+      "500": { "$value": "#9B51E0", "$type": "color" },
+      "600": { "$value": "#7C4DA8", "$type": "color" },
+      "700": { "$value": "#6B21A8", "$type": "color" },
+      "800": { "$value": "#581C87", "$type": "color" },
+      "900": { "$value": "#3B0764", "$type": "color" }
+    },
+    "social": {
+      "facebook": { "$value": "#4267B2", "$type": "color" },
+      "twitter": { "$value": "#1DA1F2", "$type": "color" },
+      "google-blue": {
+        "$value": "#4285F4",
+        "$type": "color",
+        "$description": "Google brand blue (SSO glyph)"
+      },
+      "google-green": {
+        "$value": "#34A853",
+        "$type": "color",
+        "$description": "Google brand green (SSO glyph)"
+      },
+      "google-yellow": {
+        "$value": "#FBBC05",
+        "$type": "color",
+        "$description": "Google brand yellow (SSO glyph)"
+      },
+      "google-red": {
+        "$value": "#EA4335",
+        "$type": "color",
+        "$description": "Google brand red (SSO glyph)"
+      },
+      "apple": {
+        "$value": "{color.neutral.black}",
+        "$type": "color",
+        "$description": "Apple SSO glyph"
+      }
+    },
+    "white": { "$value": "#FFFFFF", "$type": "color" },
+    "black": { "$value": "#000000", "$type": "color" },
+    "transparent": { "$value": "transparent", "$type": "color" }
+  }
+}

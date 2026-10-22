@@ -1,0 +1,831 @@
+{
+  "color": {
+    "blue": {
+      "10": {
+        "$value": "#004875",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#00578F",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#0078C4",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#1E9DEB",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#5BB7F1",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#7BC6F4",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#98D2F6",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#BAD5FF",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#D1E3FF",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#EBF3FF",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#F5F9FF",
+        "$type": "color"
+      },
+      "$description": "Info / CTA blue \u2014 Figma ramp"
+    },
+    "midnight": {
+      "10": {
+        "$value": "#061A27",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#0A2D43",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#0E3F5E",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#2B546E",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#3E657E",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#567D96",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#7392AC",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#93B0C3",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#B1CADB",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#D3E4EF",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#EAF2F6",
+        "$type": "color"
+      },
+      "$description": "Primary brand \u2014 deep blue \u2014 Figma ramp. Steps 90 and 95 corrected to the T&W Design Kit (Redesign) `All/midnight-90` (#B1CADB) and `All/midnight-95` (#D3E4EF) variables; they previously carried desaturated values that rendered EstateOS radio hover rings and row edge lines grey instead of blue"
+    },
+    "eggplant": {
+      "10": {
+        "$value": "#1F0B16",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#2D1120",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#491B34",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#68274A",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#893F67",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#A86187",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#C281A4",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#D29AB1",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#E7C0D0",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#F2D7DF",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FBECF0",
+        "$type": "color"
+      },
+      "$description": "Secondary brand \u2014 deep purple \u2014 Figma ramp"
+    },
+    "pine": {
+      "10": {
+        "$value": "#111817",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#192423",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#293A39",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#354B4A",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#4B6A68",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#5F8683",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#85A7A4",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#9FC3C0",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#C8DCDB",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#DFEEED",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#ECF4F3",
+        "$type": "color"
+      },
+      "$description": "Success / deep teal \u2014 Figma ramp"
+    },
+    "papaya": {
+      "10": {
+        "$value": "#651600",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#732200",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#A03B00",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#C84F1B",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#E47050",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#F68E72",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#F2AB98",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#F9CDC2",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#FFE2DA",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#FFF1EE",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FFF7F6",
+        "$type": "color"
+      },
+      "$description": "Coral accent \u2014 Figma ramp"
+    },
+    "butter": {
+      "10": {
+        "$value": "#6F6400",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#928721",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#C0AD00",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#D3C10C",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#E7D74D",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#F2E574",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#FFF388",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#FFF7AD",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#FFF9C8",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#FFFCE5",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FFFEF5",
+        "$type": "color"
+      },
+      "$description": "Yellow accent \u2014 Figma ramp"
+    },
+    "stone": {
+      "70": {
+        "$value": "#F0E7CC",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#F5EEDA",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#FAF6E9",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#FEFDF2",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FFFFFA",
+        "$type": "color"
+      },
+      "$description": "Warm near-white cream \u2014 Figma ramp (corrected: was mislabeled sand)"
+    },
+    "sand": {
+      "70": {
+        "$value": "#E4E3D6",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#EDEADE",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#F2F0E5",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#F6F5EE",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FCFBF8",
+        "$type": "color"
+      },
+      "$description": "Warm neutral \u2014 Figma ramp (former \"stone\" values live here)"
+    },
+    "figma-gray": {
+      "10": {
+        "$value": "#1B1B1B",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#303030",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#474747",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#5E5E5E",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#777777",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#919191",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#ABABAB",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#C6C6C6",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#E2E2E2",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#F1F1F1",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FCFCFC",
+        "$type": "color"
+      },
+      "$description": "Neutral gray \u2014 Figma modern ramp (not Tailwind gray-50\u2026900)"
+    },
+    "success": {
+      "10": {
+        "$value": "#023900",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#035300",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#3A8038",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#4AA347",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#65BB63",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#8ACB88",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#B6DEB4",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#CEE9CD",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#E0F1DF",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#EAF6EA",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#F4FAF4",
+        "$type": "color"
+      },
+      "$description": "Success green \u2014 Figma ramp"
+    },
+    "warning": {
+      "10": {
+        "$value": "#3E2907",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#5A3C09",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#9D6810",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#B47713",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#CB8715",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#E9A12A",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#F0BF6E",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#F5D49E",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#FAE8CC",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#FCF2E3",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FEFBF6",
+        "$type": "color"
+      },
+      "$description": "Warning amber \u2014 Figma ramp"
+    },
+    "error": {
+      "10": {
+        "$value": "#5A150C",
+        "$type": "color"
+      },
+      "20": {
+        "$value": "#882011",
+        "$type": "color"
+      },
+      "30": {
+        "$value": "#B52A17",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#E2351D",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#E85D4A",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#EB7161",
+        "$type": "color"
+      },
+      "70": {
+        "$value": "#EE8577",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "#F3AEA5",
+        "$type": "color"
+      },
+      "90": {
+        "$value": "#F9D6D2",
+        "$type": "color"
+      },
+      "95": {
+        "$value": "#FCEBE8",
+        "$type": "color"
+      },
+      "99": {
+        "$value": "#FEF7F6",
+        "$type": "color"
+      },
+      "$description": "Error red \u2014 Figma ramp"
+    },
+    "accent": {
+      "1": {
+        "$value": "#E8E7E0",
+        "$type": "color"
+      },
+      "2": {
+        "$value": "#E5E4DA",
+        "$type": "color"
+      },
+      "3": {
+        "$value": "#E0DED2",
+        "$type": "color"
+      },
+      "$description": "Neutral greige accents \u2014 EstateOS swatches (steps 1\u20134)",
+      "4": {
+        "$value": "#D7D5C6",
+        "$type": "color"
+      }
+    },
+    "focus-ring": {
+      "$value": "#007BFF",
+      "$type": "color",
+      "$description": "Focus ring \u2014 Figma global swatch"
+    },
+    "cyan": {
+      "20": {
+        "$value": "rgba(59, 220, 231, 0.2)",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "rgba(59, 220, 231, 0.4)",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "rgba(59, 220, 231, 0.6)",
+        "$type": "color"
+      },
+      "80": {
+        "$value": "rgba(59, 220, 231, 0.8)",
+        "$type": "color"
+      },
+      "$description": "Teal accent",
+      "base": {
+        "$value": "#3BDCE7",
+        "$type": "color"
+      }
+    },
+    "yellow": {
+      "$description": "Standalone modern yellow",
+      "base": {
+        "$value": "#FFDA79",
+        "$type": "color"
+      },
+      "darken-10": {
+        "$value": "#BB9C06",
+        "$type": "color"
+      },
+      "darken-20": {
+        "$value": "#988804",
+        "$type": "color"
+      },
+      "darken-30": {
+        "$value": "#757603",
+        "$type": "color"
+      },
+      "lighten-10": {
+        "$value": "#F3F7CF",
+        "$type": "color"
+      },
+      "lighten-20": {
+        "$value": "#F7FAA1",
+        "$type": "color"
+      },
+      "lighten-30": {
+        "$value": "#FEFCE2",
+        "$type": "color"
+      }
+    },
+    "purple": {
+      "$description": "Data-viz purple",
+      "base": {
+        "$value": "#BE4CDB",
+        "$type": "color"
+      },
+      "darken-10": {
+        "$value": "#A950C9",
+        "$type": "color"
+      },
+      "darken-20": {
+        "$value": "#8822AA",
+        "$type": "color"
+      },
+      "darken-30": {
+        "$value": "#612C70",
+        "$type": "color"
+      },
+      "lighten-10": {
+        "$value": "#D52AE3",
+        "$type": "color"
+      },
+      "lighten-20": {
+        "$value": "#E36CE5",
+        "$type": "color"
+      },
+      "lighten-30": {
+        "$value": "#F5CAE8",
+        "$type": "color"
+      }
+    },
+    "orange": {
+      "$description": "Data-viz orange",
+      "base": {
+        "$value": "#FF9C2A",
+        "$type": "color"
+      },
+      "darken-10": {
+        "$value": "#DC8210",
+        "$type": "color"
+      },
+      "darken-20": {
+        "$value": "#BA6707",
+        "$type": "color"
+      },
+      "darken-30": {
+        "$value": "#914F02",
+        "$type": "color"
+      },
+      "lighten-10": {
+        "$value": "#FFB74E",
+        "$type": "color"
+      },
+      "lighten-20": {
+        "$value": "#FFCC7F",
+        "$type": "color"
+      },
+      "lighten-30": {
+        "$value": "#FFE2B1",
+        "$type": "color"
+      }
+    },
+    "turquoise": {
+      "$description": "Data-viz turquoise",
+      "base": {
+        "$value": "#4DE2E2",
+        "$type": "color"
+      },
+      "darken-10": {
+        "$value": "#3CCCCA",
+        "$type": "color"
+      },
+      "darken-20": {
+        "$value": "#1D8F90",
+        "$type": "color"
+      },
+      "darken-30": {
+        "$value": "#106F70",
+        "$type": "color"
+      },
+      "lighten-10": {
+        "$value": "#62CEE7",
+        "$type": "color"
+      },
+      "lighten-20": {
+        "$value": "#8FEFEF",
+        "$type": "color"
+      },
+      "lighten-30": {
+        "$value": "#BEF3F6",
+        "$type": "color"
+      }
+    },
+    "navy": {
+      "$description": "Navy blue for navigation and UI",
+      "base": {
+        "$value": "#1f2e4d",
+        "$type": "color"
+      },
+      "active": {
+        "$value": "#344f83",
+        "$type": "color"
+      },
+      "divider": {
+        "$value": "#2d4471",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "#bac8e3",
+        "$type": "color"
+      }
+    },
+    "action-blue": {
+      "$description": "Action blue for interactive elements",
+      "base": {
+        "$value": "#496eb6",
+        "$type": "color"
+      },
+      "hover": {
+        "$value": "#3d5a94",
+        "$type": "color"
+      },
+      "light": {
+        "$value": "#dee5f2",
+        "$type": "color"
+      },
+      "text": {
+        "$value": "#4365a8",
+        "$type": "color"
+      }
+    },
+    "table": {
+      "$description": "Table-specific colors",
+      "header-bg": {
+        "$value": "#f2f1f3",
+        "$type": "color"
+      },
+      "row-hover": {
+        "$value": "#e9ecf5",
+        "$type": "color"
+      },
+      "row-active": {
+        "$value": "#f4f6fb",
+        "$type": "color"
+      },
+      "row-active-alt": {
+        "$value": "#dde2ed",
+        "$type": "color"
+      }
+    },
+    "neutral-warm": {
+      "$description": "Warm neutral backgrounds",
+      "bg": {
+        "$value": "#edebe9",
+        "$type": "color"
+      },
+      "hover": {
+        "$value": "#e5e3e1",
+        "$type": "color"
+      },
+      "strong": {
+        "$value": "#d8d6d5",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "#e2e0df",
+        "$type": "color"
+      },
+      "border-strong": {
+        "$value": "#c5c3c1",
+        "$type": "color"
+      },
+      "focus": {
+        "$value": "#d0cecd",
+        "$type": "color"
+      }
+    },
+    "border-warm": {
+      "$description": "Warm border colors",
+      "light": {
+        "$value": "#e9e7e2",
+        "$type": "color"
+      }
+    },
+    "fuchsia": {
+      "$description": "Utility highlight",
+      "base": {
+        "$value": "#D100A3",
+        "$type": "color"
+      }
+    },
+    "ink": {
+      "$description": "Near-black tones for foreground and dark-mode surfaces",
+      "base": {
+        "$value": "#171717",
+        "$type": "color"
+      },
+      "deep": {
+        "$value": "#0F0F0F",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "#262626",
+        "$type": "color"
+      }
+    },
+    "sage": {
+      "30": {
+        "$value": "#4A5050",
+        "$type": "color"
+      },
+      "40": {
+        "$value": "#5A6060",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#6B7878",
+        "$type": "color"
+      },
+      "60": {
+        "$value": "#808888",
+        "$type": "color"
+      },
+      "$description": "Cool supporting gray tones",
+      "base": {
+        "$value": "#6B7280",
+        "$type": "color"
+      },
+      "light": {
+        "$value": "#ACBABA",
+        "$type": "color"
+      }
+    }
+  }
+}
