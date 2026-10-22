@@ -165,6 +165,84 @@ export const PRIMITIVE_COLOR_OPTIONS: PrimitiveColorOption[] = mergeOptions([
   flattenShared(colorShared as Record<string, unknown>),
 ]);
 
+export type ColorFamilyGroup = {
+  family: string;
+  shades: string[];
+};
+
+function compareShades(a: string, b: string): number {
+  const na = Number(a);
+  const nb = Number(b);
+  const aNum = !Number.isNaN(na) && String(na) === a;
+  const bNum = !Number.isNaN(nb) && String(nb) === b;
+  if (aNum && bNum) return na - nb;
+  return a.localeCompare(b);
+}
+
+function buildColorFamilyGroups(): ColorFamilyGroup[] {
+  const byFamily = new Map<string, Set<string>>();
+  for (const option of PRIMITIVE_COLOR_OPTIONS) {
+    const dot = option.path.indexOf('.');
+    if (dot === -1) continue;
+    const family = option.path.slice(0, dot);
+    const shade = option.path.slice(dot + 1);
+    let shades = byFamily.get(family);
+    if (!shades) {
+      shades = new Set();
+      byFamily.set(family, shades);
+    }
+    shades.add(shade);
+  }
+  return [...byFamily.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([family, shadeSet]) => ({
+      family,
+      shades: [...shadeSet].sort(compareShades),
+    }));
+}
+
+export const COLOR_FAMILY_GROUPS: ColorFamilyGroup[] = buildColorFamilyGroups();
+
+export const COLOR_FAMILIES: string[] = COLOR_FAMILY_GROUPS.map((g) => g.family);
+
+export function shadesForFamily(family: string): string[] {
+  return (
+    COLOR_FAMILY_GROUPS.find((g) => g.family === family)?.shades ?? []
+  );
+}
+
+export function parseColorPath(path: string): { family: string; shade: string } {
+  const dot = path.indexOf('.');
+  if (dot === -1) {
+    const fallback = COLOR_FAMILY_GROUPS[0];
+    return {
+      family: fallback?.family ?? 'neutral',
+      shade: fallback?.shades[0] ?? 'black',
+    };
+  }
+  const family = path.slice(0, dot);
+  const shade = path.slice(dot + 1);
+  const shades = shadesForFamily(family);
+  if (shades.length === 0) {
+    const fallback = COLOR_FAMILY_GROUPS[0];
+    return {
+      family: fallback?.family ?? family,
+      shade: fallback?.shades[0] ?? shade,
+    };
+  }
+  return {
+    family,
+    shade: shades.includes(shade) ? shade : shades[0]!,
+  };
+}
+
+export function colorPathFromParts(family: string, shade: string): string {
+  const shades = shadesForFamily(family);
+  const resolvedShade = shades.includes(shade) ? shade : shades[0];
+  if (!resolvedShade) return defaultColorPath();
+  return `${family}.${resolvedShade}`;
+}
+
 export function findColorByPath(path: string): PrimitiveColorOption | undefined {
   return PRIMITIVE_COLOR_OPTIONS.find((o) => o.path === path);
 }

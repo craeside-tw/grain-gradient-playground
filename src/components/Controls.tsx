@@ -1,9 +1,12 @@
 import type { ReactNode } from 'react';
 import type { PlaygroundState, GrainShape } from '../lib/defaults';
 import {
-  PRIMITIVE_COLOR_OPTIONS,
+  COLOR_FAMILIES,
+  colorPathFromParts,
   defaultColorPath,
+  parseColorPath,
   resolveTokenColor,
+  shadesForFamily,
   type TokenColorSlot,
 } from '../lib/primitive-colors';
 
@@ -51,6 +54,8 @@ function ColorSlotRow({
   onRemove?: () => void;
 }) {
   const resolved = resolveTokenColor(slot);
+  const { family, shade } = parseColorPath(slot.path);
+  const shadeOptions = shadesForFamily(family);
 
   return (
     <div className="color-row">
@@ -62,12 +67,40 @@ function ColorSlotRow({
       />
       <select
         className="color-select"
-        value={slot.path}
-        onChange={(e) => onSlotChange({ ...slot, path: e.target.value })}
+        value={family}
+        aria-label={`${label} family`}
+        onChange={(e) => {
+          const nextFamily = e.target.value;
+          const nextShades = shadesForFamily(nextFamily);
+          const nextShade = nextShades.includes(shade)
+            ? shade
+            : nextShades[0] ?? shade;
+          onSlotChange({
+            ...slot,
+            path: colorPathFromParts(nextFamily, nextShade),
+          });
+        }}
       >
-        {PRIMITIVE_COLOR_OPTIONS.map((opt) => (
-          <option key={opt.path} value={opt.path}>
-            {opt.label}
+        {COLOR_FAMILIES.map((f) => (
+          <option key={f} value={f}>
+            {f}
+          </option>
+        ))}
+      </select>
+      <select
+        className="color-select color-select-shade"
+        value={shade}
+        aria-label={`${label} shade`}
+        onChange={(e) =>
+          onSlotChange({
+            ...slot,
+            path: colorPathFromParts(family, e.target.value),
+          })
+        }
+      >
+        {shadeOptions.map((s) => (
+          <option key={s} value={s}>
+            {s}
           </option>
         ))}
       </select>
@@ -202,13 +235,13 @@ export function Controls({
           </div>
         </ControlRow>
 
-        <p className="control-section-title">Shader props</p>
+        <p className="control-section-title">Colors</p>
 
         <div className="color-slots">
           {state.colorSlots.map((slot, index) => (
             <ColorSlotRow
               key={index}
-              label={`colors[${index}]`}
+              label={`Color ${index + 1}`}
               slot={slot}
               onSlotChange={(s) => updateColorSlot(index, s)}
               onRemove={
@@ -227,10 +260,12 @@ export function Controls({
         )}
 
         <ColorSlotRow
-          label="colorBack"
+          label="Background color"
           slot={state.colorBack}
           onSlotChange={(colorBack) => patch({ colorBack })}
         />
+
+        <p className="control-section-title">Effects</p>
 
         <ControlRow label="softness">
           <RangeInput
@@ -260,7 +295,7 @@ export function Controls({
           />
         </ControlRow>
 
-        <p className="control-section-title">Common props</p>
+        <p className="control-section-title">Controls</p>
 
         <ControlRow label="speed">
           <div className="control-value-split">
