@@ -45,7 +45,9 @@ export function App() {
             <button
               type="button"
               className="download-button"
-              onClick={() => previewRef.current?.downloadPng()}
+              onClick={() => {
+                void previewRef.current?.downloadPng();
+              }}
             >
               Download PNG
             </button>

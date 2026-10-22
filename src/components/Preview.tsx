@@ -2,10 +2,11 @@ import { GrainGradient } from '@paper-design/shaders-react';
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 import type { PlaygroundState } from '../lib/defaults';
 import { parseDimensionInput } from '../lib/defaults';
+import { downloadPreviewPng } from '../lib/download-preview-png';
 import { resolveTokenColor } from '../lib/primitive-colors';
 
 export type PreviewHandle = {
-  downloadPng: (filename?: string) => void;
+  downloadPng: (filename?: string) => Promise<boolean>;
 };
 
 type PreviewProps = {
@@ -13,19 +14,24 @@ type PreviewProps = {
   animationSpeed: number;
 };
 
+const WEBGL_CAPTURE_ATTRIBUTES = {
+  preserveDrawingBuffer: true,
+} as const;
+
 export const Preview = forwardRef<PreviewHandle, PreviewProps>(
   function Preview({ state, animationSpeed }, ref) {
     const frameRef = useRef<HTMLDivElement>(null);
 
     useImperativeHandle(ref, () => ({
       downloadPng(filename) {
-        const canvas = frameRef.current?.querySelector('canvas');
-        if (!canvas) return;
+        const container = frameRef.current;
+        if (!container) return Promise.resolve(false);
 
-        const link = document.createElement('a');
-        link.download = filename ?? `grain-gradient-${Date.now()}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        const colorBack = resolveTokenColor(state.colorBack);
+        return downloadPreviewPng(container, {
+          filename,
+          backgroundColor: colorBack,
+        });
       },
     }));
 
@@ -52,6 +58,7 @@ export const Preview = forwardRef<PreviewHandle, PreviewProps>(
           width={width === '' ? '100%' : width}
           height={height === '' ? '100%' : height}
           fit="cover"
+          webGlContextAttributes={WEBGL_CAPTURE_ATTRIBUTES}
         />
       </div>
     );
