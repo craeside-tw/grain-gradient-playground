@@ -18,6 +18,34 @@ npm run dev
 
 Otherwise builds use `vendor/design-tokens/` snapshots.
 
+## Save and reload a gradient (recipe + PNG)
+
+The playground cannot reconstruct shader settings from a PNG alone. Use a **paired export**:
+
+| File | Purpose |
+|------|---------|
+| `{name}.png` | Visual snapshot at export time |
+| `{name}.grainrecipe.json` | Token paths, shader props, **pause**, and **frameMs** |
+
+1. **Save** (under the preview) downloads `{slug}.png` and `{slug}.grainrecipe.json` with the same auto-generated slug (`grain-<timestamp>`).
+2. **Starting point** in the control panel: **Load recipe** or **Paste JSON** restores the editor.
+3. Compare the live preview to the paired PNG on disk (same basename as the recipe file).
+
+The recipe stores `frameMs` (Paper shader time in ms) and always writes **`paused: true`** on Save, because the paired PNG is a still. **Import always freezes** the preview at `frameMs` so you can compare to that PNG; use **Play** in the preview strip to animate again. Older recipes that saved `"paused": false` while the Pause pill still showed **Pause** are treated as paused on load (with a warning in the toast). The code panel still exports resolved hex for Paper; recipes are for playground round-trip only.
+
+Example recipe fields:
+
+```json
+{
+  "grainRecipe": "1",
+  "name": "home-hero",
+  "paused": true,
+  "frameMs": 8420
+}
+```
+
+(Full schema includes all control values and `colorSlots` with `path` + `opacity`.)
+
 ## GitHub Pages (personal or org repo)
 
 This folder is a **standalone repo root** (not tied to Company Brain).

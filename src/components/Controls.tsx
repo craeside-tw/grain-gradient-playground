@@ -10,8 +10,17 @@ import {
   type TokenColorSlot,
 } from '../lib/primitive-colors';
 
+export type RecipePanelMeta = {
+  recipeFile: string;
+  pngFile: string;
+  frameMs: number;
+  loadWarnings?: string[];
+};
+
 type ControlsProps = {
   state: PlaygroundState;
+  recipeMeta: RecipePanelMeta | null;
+  recipeEdited: boolean;
   onChange: (next: PlaygroundState) => void;
   onRandomize: () => void;
 };
@@ -269,6 +278,8 @@ function RangeInput({
 
 export function Controls({
   state,
+  recipeMeta,
+  recipeEdited,
   onChange,
   onRandomize,
 }: ControlsProps) {
@@ -301,8 +312,8 @@ export function Controls({
 
   return (
     <aside className="flex h-full max-h-[45vh] min-h-0 w-full max-w-none shrink-0 flex-col border-t border-gray-200 bg-white font-sans antialiased max-lg:overflow-hidden lg:max-h-none lg:w-[360px] lg:border-t-0 lg:border-l">
-      <div className={`flex-1 overflow-x-hidden overflow-y-auto ${panelPadding}`}>
-        <div className={panelSections}>
+      <div className="flex-1 overflow-x-hidden overflow-y-auto">
+        <div className={`${panelPadding} ${panelSections}`}>
           <section className={panelFields}>
             <ControlRow label="Shape">
               <div className="flex min-w-0 items-center gap-1.5">
@@ -466,6 +477,36 @@ export function Controls({
           </section>
         </div>
       </div>
+
+      {recipeMeta ? (
+        <div className="relative shrink-0 border-t border-gray-200 bg-gray-50/80 px-3 py-3">
+          {recipeEdited ? (
+            <span className="absolute top-3 right-3 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800 ring-1 ring-amber-200 ring-inset">
+              Edited
+            </span>
+          ) : null}
+          <div className="mb-1.5">
+            <span className="text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+              Recipe files
+            </span>
+          </div>
+          <p className="truncate font-mono text-[10px] text-gray-700">
+            {recipeMeta.recipeFile}
+          </p>
+          <p className="truncate font-mono text-[10px] text-gray-700">
+            {recipeMeta.pngFile}
+          </p>
+          <p className="mt-1 text-[10px] text-gray-500">
+            Frame {Math.round(recipeMeta.frameMs)}ms · compare PNG on your
+            machine
+          </p>
+          {recipeMeta.loadWarnings && recipeMeta.loadWarnings.length > 0 ? (
+            <p className="mt-1.5 text-[10px] leading-snug text-amber-800">
+              {recipeMeta.loadWarnings.join(' ')}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
     </aside>
   );
 }
