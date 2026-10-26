@@ -219,7 +219,14 @@ export function App() {
                 type="button"
                 className="playback-button"
                 aria-pressed={animationPaused}
-                onClick={() => setAnimationPaused((paused) => !paused)}
+                onClick={() => {
+                  if (!animationPaused) {
+                    const nowMs =
+                      previewRef.current?.getCurrentFrame() ?? frameMs;
+                    setFrameMs(nowMs);
+                  }
+                  setAnimationPaused((paused) => !paused);
+                }}
               >
                 {animationPaused ? 'Play' : 'Pause'}
               </button>

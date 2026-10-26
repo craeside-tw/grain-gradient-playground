@@ -96,12 +96,10 @@ export const Preview = forwardRef<PreviewHandle, PreviewProps>(
       };
     }, [paused, frameMs, playbackKey, state.shape]);
 
-    const grainKey = `${playbackKey}-${paused ? 'paused' : 'playing'}-${Math.round(frameMs)}`;
-
     return (
       <div className="preview-frame" ref={frameRef}>
         <GrainGradient
-          key={grainKey}
+          key={String(playbackKey)}
           colors={colors}
           colorBack={colorBack}
           softness={state.softness}
